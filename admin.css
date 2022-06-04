@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 150vh;
+    background: #e2e9f7;
+
+}
+.side-nav{
+    width: 250px;
+    height: 100%;
+    background: #598dbb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+}
+.logo{
+    display: block;
+    margin-bottom: 130px;
+}
+.logo-img{
+    width:10px;
+    height: 10px;
+}
+.nav-links{
+    list-style: none;
+    position: relative;
+}
+.nav-links li{
+    padding: 10px 0;
+}
+
+.nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+
+    display: flex;
+    align-items: center;
+}
+.nav-links li a i{
+    font-size: 30px;
+    margin-right: 20px;
+}
+.active{
+    background: #fff;
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 2.6%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255,0.4);
+    display: none;
+    transition: top 0.4s;
+}
+.nav-links li:hover a{
+    color: #0d74f5;
+    transition: 0.3s;
+}
+
+.nav-links li:hover ~ .active{
+    display: block;
+}
+
+.nav-links li:nth-child(1):hover ~ .active{
+    top:3.7%
+}
+.nav-links li:nth-child(2):hover ~ .active{
+    top:38%
+}
+.nav-links li:nth-child(3):hover ~ .active{
+    top:72%
+}
+.nav-links p{
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 600px){
+    .side-nav{
+        width: 110px;
+    }
+    .nav-links li a p {
+        display: none;
+    }
+    .nav-links li a i {
+        margin-right: 0;
+    }
+    .nav-links li a{
+        justify-content: center;
+    }
+}
+main {
+    position:absolute;
+    top: 5%;
+    left: 25%;
+    width: calc(100% - 20%);
+    padding: 4rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-radius: 2px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+main .content {
+    width: 80%;
+    display: flex;
+    margin: 40px 30px;
+    padding: 1rem 4rem;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background: #fff;
+    color: #0d4d78;
+    display: flex;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+
+main .content h3{
+    font-size: 1.6rem;
+    color: #0d4d78;
+    padding: 1rem 0;
+    text-align: center;
+
+}
+
+
+.btn{
+    border: none;
+    outline: none;
+    padding: 6px 6px ;
+    margin-left: 35%;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    background: linear-gradient(135deg, #6a92bd, #2b6ca9);
+    border-radius: 5px; 
+    width: 30%;
+    cursor: pointer;
+    
+}
+
+main .content .box {
+    margin: 10px 20px;
+    width: 100%;
+}
+
+main .content .box h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1A237E;
+    padding-bottom: 1.5rem;
+}
+
+main .content .box .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    background: #fff ;
+    z-index: 10;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+}
+
+main .content .box .row .data {
+    position: relative;
+}
+
+main .content .box .row .data h3 {
+    font-size: 1.6rem;
+    color: rgb(20, 20, 20);
+}
+
+main .content .box .row .data h4 {
+    font-size: 3.5rem;
+    color: #1A237E;
+    padding: 1rem 0;
+}
+
+main .content .box .row .image {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+}
+
+main .content .box .row .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width:1280px) {
+    main {
+        width: calc(100% - 40%);
+    }
+}
+
+@media (max-width:980px) {
+    nav {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        padding: 0 .5rem 1rem .5rem;
+        background: linear-gradient(135deg, #1A237E, #5266d4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0;
+    }
+    nav .brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: .5rem;
+        margin-top: 0;
+    }
+    nav .brand .profile {
+        display: none;
+    }
+    nav .brand label {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav ul li {
+        list-style: none;
+        padding: .5rem;
+        margin: 0 .2rem;
+        border-radius: 5px;
+        text-align: center;
+    }
+    nav ul li a {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    main {
+        position: absolute;
+        top: 140px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    main .card_container .single_card {
+        width: 370px;
+        margin: 1rem 1rem;
+    }
+    main .content {
+        width: 100%;
+        display: flex;
+        padding: 1rem 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    main .content .left_box {
+        width: 100%;
+        flex: 1;
+        padding: 1rem;
+        padding-right: 1rem;
+        margin: 1rem;
+    }
+    main .content .right_box {
+        width: 100%;
+        flex: 1;
+        padding: 0;
+        margin: auto;
+    }
+    main .content .box h1 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    main .content .box .row .data h3{
+        text-align: center;
+    }
+    main .content .box .row .data h4{
+        text-align: center;
+    }
+    main .content .box .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        flex-wrap: wrap;
+    }
+}

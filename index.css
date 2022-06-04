@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all .5s;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EEEEEE;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.container .admin{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    text-decoration: none;
+    padding: 5px 20px ;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    background: linear-gradient(135deg,#1A237E,#303F9F);
+    border-radius: 5px; 
+}
+.container .box{
+width: 350px;
+padding: 2rem;
+background: #fff;
+border-radius: 10px;
+box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+text-align: center;
+display: grid;
+place-items: center;
+}
+.container .box h1{
+    width: 100%;
+    color: #283593;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: .5rem 0;
+    display: inline;
+}
+.container .box p{
+font-size: 1.2rem;
+line-height: 1.5rem;
+margin-top: 1rem;
+}
+.container .box button{
+    text-decoration: none;
+    padding: 5px 20px ;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    background: linear-gradient(135deg,#1A237E,#303F9F);
+    border-radius: 5px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container .box a:hover{
+transform: scale(1.2);
+}
+@media (max-width:480px) {
+
+    .container .box{
+width:100%;
+padding: 2rem 1rem;
+background: #fff;
+border-radius: 10px;
+box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+text-align: center;
+margin: 0 .4rem;
+}
+
+}
